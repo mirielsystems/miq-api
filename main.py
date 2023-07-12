@@ -244,6 +244,10 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def main():
+    return "Base URL: https://example.com/<br><br>Endpoints<br>/original Original B&W MiaQ image<br>/colour MiaQ image with coloured icon<br>/reverse MiaQ image with flipped icon position<br>/reverseColour Flipped, coloured icon<br>/white MiaQ image with white background<br>/reverseWhite White background with flipped icon<br><br>Query Parameters<br>name: Username<br>tag: Tag<br>id: User ID<br>icon: Icon URL<br>content: Message Content<br><br>Host your own API here! (https://github.com/maamokun/miq-api)<br>Original code from Taka005 (https://github.com/Taka005/miq)"
+
+@app.route("/original", methods=["GET"])
+def main():
     res = make(
         request.args.get("name") or "SAMPLE",
         request.args.get("id") or "0000000000000000000",
@@ -252,7 +256,7 @@ def main():
     )
     return send_file(res, mimetype="image/png")
 
-@app.route("/color", methods=["GET"])
+@app.route("/colour", methods=["GET"])
 def color():
     res = colorMake(
         request.args.get("name") or "SAMPLE",
@@ -272,7 +276,7 @@ def reverse():
     )
     return send_file(res, mimetype="image/png")
 
-@app.route("/reverseColor", methods=["GET"])
+@app.route("/reverseColour", methods=["GET"])
 def reverseColor():
     res = reverseColorMake(
         request.args.get("name") or "SAMPLE",
