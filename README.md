@@ -17,9 +17,10 @@
 - icon: アイコン
 ## 公開API
 - ベースURL: https://miq-api.mikanbot.com/
+- 使い方はホームの説明文を参考にしてください。
 - レートリミット等はありません。過度なリクエスト等迷惑行為以外ご自由にご利用ください。
 - 'production' ブランチより稼働しています。
 - サーバーはDigitalOceanが提供しています。下のボタンをクリックして登録すると$200の無料クレジットがもらえます。
-- ゲッ、アフィカスかよ...
+- (ゲッ、アフィカスかよ...)
 
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=8cf946829421&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
