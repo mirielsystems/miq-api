@@ -4,7 +4,8 @@
 - `python main.py`で起動
 - `http://localhost:3000/`でアクセスする
 ## エンドポイント
-- `/` Make it a Quote画像
+- `/` 説明文
+- `/original` Make it a Quote画像
 - `/colour` カラーアイコン
 - `/reverse` アイコンの位置反転
 - `/reverseColor` カラーアイコン・アイコンの位置反転
