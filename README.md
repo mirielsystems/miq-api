@@ -15,3 +15,9 @@
 - id: ID
 - content: 内容
 - icon: アイコン
+## 公開API
+- 'production' ブランチより稼働しています。
+- サーバーはDigitalOceanが提供しています。下のボタンをクリックして登録すると$200の無料クレジットがもらえます。
+- ゲッ、アフィカスかよ...
+
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=8cf946829421&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
