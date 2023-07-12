@@ -18,7 +18,7 @@ BASE_RV_W_IMAGE = Image.open("images/base-gd-w-rv.png")
 
 BASE_IMAGE = Image.open("images/base.png")
 MPLUS_FONT = ImageFont.truetype("fonts/MPLUSRounded1c-Regular.ttf", size=16)
-BRAND = "TakasumiBOT#7189"
+BRAND = "MikanDev MiaQ API"
 
 def drawText(im, ofs, string, font="fonts/MPLUSRounded1c-Regular.ttf", size=16, color=(0, 0, 0, 255), split_len=None, padding=4, auto_expand=False, disable_dot_wrap=False):
     draw = ImageDraw.Draw(im)
@@ -244,15 +244,15 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def main():
-    return "Base URL: https://example.com/<br><br>Endpoints<br>/original Original B&W MiaQ image<br>/colour MiaQ image with coloured icon<br>/reverse MiaQ image with flipped icon position<br>/reverseColour Flipped, coloured icon<br>/white MiaQ image with white background<br>/reverseWhite White background with flipped icon<br><br>Query Parameters<br>name: Username<br>tag: Tag<br>id: User ID<br>icon: Icon URL<br>content: Message Content<br><br>Host your own API here! (https://github.com/maamokun/miq-api)<br>Original code from Taka005 (https://github.com/Taka005/miq)"
+    return "Base URL: https:/miq-api.mikanbot.com/<br><br>Endpoints<br>/original Original B&W MiaQ image<br>/colour MiaQ image with coloured icon<br>/reverse MiaQ image with flipped icon position<br>/reverseColour Flipped, coloured icon<br>/white MiaQ image with white background<br>/reverseWhite White background with flipped icon<br><br>Query Parameters<br>name: Username<br>tag: Tag<br>id: User ID<br>icon: Icon URL<br>content: Message Content<br><br>Host your own API here! (https://github.com/maamokun/miq-api)<br>Original code from Taka005 (https://github.com/Taka005/miq)"
 
 @app.route("/original", methods=["GET"])
 def main():
     res = make(
         request.args.get("name") or "SAMPLE",
         request.args.get("id") or "0000000000000000000",
-        request.args.get("content") or "Make it a Quote",
-        request.args.get("icon") or "https://cdn.discordapp.com/embed/avatars/0.png"
+        request.args.get("content") or "This isn't a very good quote unless you say something",
+        request.args.get("icon") or "https://cdn.mikn.dev/MikanBot.png"
     )
     return send_file(res, mimetype="image/png")
 
@@ -261,8 +261,8 @@ def color():
     res = colorMake(
         request.args.get("name") or "SAMPLE",
         request.args.get("id") or "0000000000000000000",
-        request.args.get("content") or "Make it a Quote",
-        request.args.get("icon") or "https://cdn.discordapp.com/embed/avatars/0.png"
+        request.args.get("content") or "This isn't a very good quote unless you say something",
+        request.args.get("icon") or "https://cdn.mikn.dev/MikanBot.png"
     )
     return send_file(res, mimetype="image/png")
 
@@ -271,8 +271,8 @@ def reverse():
     res = reverseMake(
         request.args.get("name") or "SAMPLE",
         request.args.get("id") or "0000000000000000000",
-        request.args.get("content") or "Make it a Quote",
-        request.args.get("icon") or "https://cdn.discordapp.com/embed/avatars/0.png"
+        request.args.get("content") or "This isn't a very good quote unless you say something",
+        request.args.get("icon") or "https://cdn.mikn.dev/MikanBot.png"
     )
     return send_file(res, mimetype="image/png")
 
@@ -281,8 +281,8 @@ def reverseColor():
     res = reverseColorMake(
         request.args.get("name") or "SAMPLE",
         request.args.get("id") or "0000000000000000000",
-        request.args.get("content") or "Make it a Quote",
-        request.args.get("icon") or "https://cdn.discordapp.com/embed/avatars/0.png"
+        request.args.get("content") or "This isn't a very good quote unless you say something",
+        request.args.get("icon") or "https://cdn.mikn.dev/MikanBot.png"
     )
     return send_file(res, mimetype="image/png")
 
@@ -292,8 +292,8 @@ def white():
     res = whiteMake(
         request.args.get("name") or "SAMPLE",
         request.args.get("id") or "0000000000000000000",
-        request.args.get("content") or "Make it a Quote",
-        request.args.get("icon") or "https://cdn.discordapp.com/embed/avatars/0.png"
+        request.args.get("content") or "This isn't a very good quote unless you say something",
+        request.args.get("icon") or "https://cdn.mikn.dev/MikanBot.png"
     )
     return send_file(res, mimetype="image/png")
 
@@ -302,8 +302,8 @@ def reverseWhite():
     res = reverseWhiteMake(
         request.args.get("name") or "SAMPLE",
         request.args.get("id") or "0000000000000000000",
-        request.args.get("content") or "Make it a Quote",
-        request.args.get("icon") or "https://cdn.discordapp.com/embed/avatars/0.png"
+        request.args.get("content") or "This isn't a very good quote unless you say something",
+        request.args.get("icon") or "https://cdn.mikn.dev/MikanBot.png"
     )
     return send_file(res, mimetype="image/png")
 
