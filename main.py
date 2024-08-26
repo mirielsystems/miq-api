@@ -18,7 +18,7 @@ BASE_RV_W_IMAGE = Image.open("images/base-gd-w-rv.png")
 
 BASE_IMAGE = Image.open("images/base.png")
 MPLUS_FONT = ImageFont.truetype("fonts/MPLUSRounded1c-Regular.ttf", size=16)
-BRAND = "TakasumiBOT#7189"
+BRAND = "Lisna#9012"
 
 def drawText(im, ofs, string, font="fonts/MPLUSRounded1c-Regular.ttf", size=16, color=(0, 0, 0, 255), split_len=None, padding=4, auto_expand=False, disable_dot_wrap=False):
     draw = ImageDraw.Draw(im)
